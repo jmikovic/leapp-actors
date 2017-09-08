@@ -1,4 +1,5 @@
 jsl == 0.2.4
 jsonschema
+git+https://github.com/leapp-to/snactor.git
 #PyYAML
 #ansible
