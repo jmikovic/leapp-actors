@@ -1,1 +1,4 @@
 jsl == 0.2.4
+jsonschema
+#PyYAML
+#ansible
