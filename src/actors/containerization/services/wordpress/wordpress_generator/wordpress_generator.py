@@ -6,10 +6,14 @@ from subprocess import check_output, CalledProcessError
 
 def _execute(cmd, **kwargs):
     try:
-        return check_output(cmd, shell=True, **kwargs)
+        output = check_output(cmd, shell=True, **kwargs)
+        if not output:
+            return True
     except CalledProcessError as e:
         sys.stderr.write(str(e)+'\n')
         return None
+
+    return output
 
 
 def build_base_image(version):
